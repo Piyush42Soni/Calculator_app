@@ -53,7 +53,7 @@
             android:layout_marginTop="5dp"
             android:backgroundTint="#484949"
             android:text="@string/plus_minus"
-            android:onClick="@{()->viewModel.other('.')}"
+            android:onClick="@{()->viewModel.dot()}"
             android:textSize="24sp"
             app:cornerRadius="100dp"
             app:layout_constraintEnd_toEndOf="parent"

@@ -15,14 +15,32 @@ class BodyViewModel:ViewModel() {
     val word:LiveData<String>
     get()=_word
     init{
-        _word.value=""
+        _word.value="0"
     }
     fun number(i:Int){
         _word.value=_word.value+i.toString()
     }
     fun other(i:Char){
-        if(_word.value?.get(_word.value!!.length-1)?.isDigit()== true){
+        if (_word.value.isNullOrEmpty()) {
+            _word.value="0"
+        }
+        if((_word.value?.get(_word.value!!.length-1)?.isDigit() == true)){
             _word.value=_word.value+i.toString()
+        }
+        else{
+            _word.value="0"
+        }
+    }
+    fun dot() {
+        if (_word.value.isNullOrEmpty()) {
+            _word.value="0"
+        }
+        if ((_word.value?.last()?.isDigit() == true) == true and (!_word.value?.toString()
+                ?.contains('.')!!)
+        ) {
+            _word.value = _word.value + "."
+        } else {
+            _word.value = "0"
         }
     }
     fun CE(){
