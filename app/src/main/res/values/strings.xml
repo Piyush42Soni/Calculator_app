@@ -23,4 +23,6 @@
     <string name="minus">-</string>
     <string name="plus">+</string>
     <string name="multiply">*</string>
+    <string name="y">Button</string>
+    <string name="his">History</string>
 </resources>

@@ -22,5 +22,10 @@
         <action
             android:id="@+id/action_intro_to_body"
             app:destination="@id/body" />
+        <argument android:name="IntroArgs" />
     </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.example.calculator.History"
+        android:label="History" />
 </navigation>
